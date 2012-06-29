@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>${H(Title)}</title>
+    <var virtualPath="SiteResource('~/')" />
+    <script type="text/javascript">
+      var require = {
+        waitSeconds: 15,
+        baseUrl: '${virtualPath}_content/scripts/'
+      };
+    </script>
+    <script type="text/javascript" src="~/_content/scripts/require.js"></script>
+    <script type="text/javascript" src="~/_content/scripts/lib/jquery-1.7.1.min.js"></script>
+    <use content="head"/>
+  </head>
+  <body>
+    <use content="view"/>
+  </body>
+</html>

@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubuMVC.ServerSentEvents", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubuMVC.ServerSentEvents.Testing", "FubuMVC.ServerSentEvents.Testing\FubuMVC.ServerSentEvents.Testing.csproj", "{B646FAE2-2880-4DC1-9FB1-B094C0DA236A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubuMVC.ServerSentEvents.Demo", "FubuMVC.ServerSentEvents.Demo\FubuMVC.ServerSentEvents.Demo.csproj", "{53E4F89D-4D92-4DC6-9F35-3B275A957DF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +20,10 @@ Global
 		{B646FAE2-2880-4DC1-9FB1-B094C0DA236A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B646FAE2-2880-4DC1-9FB1-B094C0DA236A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B646FAE2-2880-4DC1-9FB1-B094C0DA236A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53E4F89D-4D92-4DC6-9F35-3B275A957DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E4F89D-4D92-4DC6-9F35-3B275A957DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E4F89D-4D92-4DC6-9F35-3B275A957DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E4F89D-4D92-4DC6-9F35-3B275A957DF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

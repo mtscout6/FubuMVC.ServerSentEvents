@@ -1,0 +1,27 @@
+﻿<viewdata model="FubuMVC.ServerSentEvents.Demo.Handlers.HomeViewModel"/>
+
+<content:head>
+  <script type="text/javascript" src="~/_content/scripts/home.js"></script>
+</content:head>
+
+<h1>FubuMVC - Server Sent Events Demo</h1>
+
+<div>
+  <h3>Custom Queue - State Machine</h3>
+  <hr />
+  <div id="customqueueresults" data-bind="foreach: receivedStates">
+    <div>
+      <span data-bind="text: 'State Id: ' + stateId"></span>
+      <span data-bind="text: ', Some Value: ' + someValue()"></span>
+      <span data-bind="text: ', Current Name: ' + currentName()"></span>
+    </div>
+  </div>
+</div>
+
+<div>
+  <h3>Default Method</h3>
+  <hr />
+  <div id="defaultmethodresults" data-bind="foreach: receivedEvents">
+    <div data-bind="text: $data"></div>
+  </div>
+</div>

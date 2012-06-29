@@ -1,0 +1,6 @@
+﻿<use namespace="System" />
+<use namespace="System.Linq" />
+<use namespace="System.Collections.Generic" />
+<use namespace="FubuCore" />
+
+<global type="string" Title="'Fubu MVC - Server Sent Events'"/>

@@ -1,4 +1,3 @@
-using System;
 using FubuCore.Util;
 
 namespace FubuMVC.ServerSentEvents
@@ -17,7 +16,6 @@ namespace FubuMVC.ServerSentEvents
             _channels.OnMissing = topic =>
             {
                 var queue = factory.BuildFor(topic);
-
                 return new TopicChannel<T>(queue);
             };
         }
