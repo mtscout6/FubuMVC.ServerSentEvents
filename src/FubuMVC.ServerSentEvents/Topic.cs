@@ -6,5 +6,6 @@ namespace FubuMVC.ServerSentEvents
     {
         [HeaderValue("Last-Event-ID")]
         public string LastEventId { get; set; }
+        public string InitialEventId { get; set; }
     }
 }

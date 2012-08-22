@@ -23,24 +23,36 @@ namespace FubuMVC.ServerSentEvents
             _events.Add(@event);
         }
 
-
         public IEnumerable<T> FindQueuedEvents(Topic topic)
         {
-            if (topic == null || topic.LastEventId.IsEmpty())
-            {
+            if (topic == null)
                 return _events.ToList();
-            }
 
-            if (!_events.Any() || _events.Last().Id == topic.LastEventId) return Enumerable.Empty<T>();
+            var ids = new List<string>();
 
-            var lastEvent = _events.FirstOrDefault(x => x.Id == topic.LastEventId);
-            if (lastEvent == null)
-            {
+            if (topic.InitialEventId.IsNotEmpty())
+                ids.Add(topic.InitialEventId);
+
+            if (topic.LastEventId.IsNotEmpty())
+                ids.Add(topic.LastEventId);
+
+            if (!ids.Any())
                 return _events.ToList();
-            }
 
-            var index = _events.IndexOf(lastEvent);
-            return _events.Skip(index + 1).ToList();
+            var foundEvents = new List<T>();
+
+            _events.Each(e =>
+            {
+                if (ids.Any(i => i == e.Id))
+                {
+                    foundEvents.Clear();
+                    return;
+                }
+
+                foundEvents.Add(e);
+            });
+
+            return foundEvents;
         }
     }
 }
