@@ -2,7 +2,7 @@ namespace FubuMVC.ServerSentEvents
 {
     public class ServerEvent : IServerEvent
     {
-        public ServerEvent(string id, string data)
+        public ServerEvent(string id, object data)
         {
             Id = id;
             Data = data;
